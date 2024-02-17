@@ -1,7 +1,10 @@
+import "/app/globals.css";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressCard, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home() {
   return (
@@ -48,7 +51,7 @@ function HeroSection() {
             📧 Shoot your suggestions my way at{" "}
             <a
               href="mailto:a@likecat.cn"
-              className="text-blue-200 underline hover:text-blue-300 active:text-blue-400 transition ease-in-out"
+              className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out"
             >
               a@likecat.cn
             </a>
@@ -64,13 +67,20 @@ function HeroSection() {
           </p>
           <div className="space-x-4 pt-8">
             <Link href={"about"}>
-              <button className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out">
-                About Me
+              <button
+                type="button"
+                className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
+              >
+                <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon> About
+                Me
               </button>
             </Link>
             <Link href={"mailto:a@likecat.cn"}>
-              <button className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out">
-                Mail Me
+              <button
+                type="button"
+                className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
+              >
+                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> Mail Me
               </button>
             </Link>
           </div>
@@ -82,7 +92,7 @@ function HeroSection() {
 
 function InterestBar() {
   return (
-    <div className="container mx-auto px-4 mt-8 text-xl md:text-2xl xl:text-3xl">
+    <div className="container mx-auto px-4 mt-8 md:text-xl xl:text-3xl">
       <h2 className="font-bold mb-4">Things I interested</h2>
       <div className="flex space-x-4 font-mono border-y border-y-white/20 py-4">
         <div className="space-y-4">
