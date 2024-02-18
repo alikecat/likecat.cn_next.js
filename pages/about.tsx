@@ -1,6 +1,6 @@
 import "/app/globals.css";
 import { NavBar } from "@/components/NavBar";
-import { SideBar } from "../components/SideBar";
+import { SideBar } from "@/components/SideBar";
 
 export default function About() {
   return (

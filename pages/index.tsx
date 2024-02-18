@@ -1,11 +1,8 @@
 import "/app/globals.css";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import HeroSection from "@/components/HeroSection.mdx";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressCard, faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import router from "next/router";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,72 +15,6 @@ export default function Home() {
         <InterestBar />
       </main>
       <Footer />
-    </div>
-  );
-}
-
-function HeroSection() {
-  return (
-    <div
-      className="bg-cover"
-      style={{
-        backgroundImage: "url('https://source.unsplash.com/random?wallpapers')",
-      }}
-    >
-      <div className="bg-slate-900/50 backdrop-brightness-50">
-        <div className="container mx-auto px-4 pt-24 md:pt-28 xl:pt-32 pb-12 md:pb-16 xl:pb-20 font-mono xl:text-2xl md:text-xl xl:leading-loose md:leading-relaxed space-y-4">
-          <h1 className="font-serif xl:text-6xl lg:text-5xl md:text-4xl text-2xl font-bold tracking-widest mb-8">
-            Likecat.cn
-          </h1>
-          <p>
-            🚀 Greetings, cosmic wanderers! 🌌 Step into the cosmic construction
-            site of my upcoming personal website – a digital universe in the
-            making! 🌐 Currently, it’s a canvas waiting for strokes of
-            creativity and your stellar suggestions.
-          </p>
-          <p>
-            🌟 What cosmic wonders should this cyber sanctuary behold? That’s
-            where you come in! Your ingenious ideas can turn this digital
-            playground into a constellation of captivating experiences – be it
-            interactive marvels, mind-bending graphics, or a dedicated space for
-            the weirdest cat videos in the cosmos.
-          </p>
-          <p>
-            📧 Shoot your suggestions my way at{" "}
-            <Link
-              href="mailto:a@likecat.cn"
-              className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out"
-            >
-              a@likecat.cn
-            </Link>
-            , and let the brainstorming cosmic energy flow! Your imagination
-            might just be the nebula that sparks this website’s celestial
-            transformation. 🎨💡
-          </p>
-          <p>
-            🙏 A galaxy-sized thank you for dropping by this construction zone.
-            Your virtual hard hat and imaginative contributions are the stardust
-            that propels this project forward! Brace yourself for the cosmic
-            reveal – it’s bound to be legendary! 🚧✨
-          </p>
-          <div className="space-x-4 pt-8">
-            <button
-              type="button"
-              className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
-              onClick={() => router.push("about")}
-            >
-              <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon> About Me
-            </button>
-            <button
-              type="button"
-              className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
-              onClick={() => router.push("mailto:a@likecat.cn")}
-            >
-              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> Mail Me
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

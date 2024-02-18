@@ -18,7 +18,7 @@ export function NavBar() {
             <span className="font-serif font-bold text-sm">Bojun Zhang</span>
           </div>
         </Link>
-        <div className="flex space-x-4 text-xl py-4 my-auto">
+        <div className="flex space-x-4 sm:text-xl py-4 my-auto">
           <button
             type="button"
             className="p-2 rounded-md hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
