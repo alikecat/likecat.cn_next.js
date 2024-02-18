@@ -1,10 +1,11 @@
 import "/app/globals.css";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
-import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard, faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import router from "next/router";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -49,12 +50,12 @@ function HeroSection() {
           </p>
           <p>
             📧 Shoot your suggestions my way at{" "}
-            <a
+            <Link
               href="mailto:a@likecat.cn"
               className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out"
             >
               a@likecat.cn
-            </a>
+            </Link>
             , and let the brainstorming cosmic energy flow! Your imagination
             might just be the nebula that sparks this website’s celestial
             transformation. 🎨💡
@@ -66,23 +67,20 @@ function HeroSection() {
             reveal – it’s bound to be legendary! 🚧✨
           </p>
           <div className="space-x-4 pt-8">
-            <Link href={"about"}>
-              <button
-                type="button"
-                className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
-              >
-                <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon> About
-                Me
-              </button>
-            </Link>
-            <Link href={"mailto:a@likecat.cn"}>
-              <button
-                type="button"
-                className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
-              >
-                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> Mail Me
-              </button>
-            </Link>
+            <button
+              type="button"
+              className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
+              onClick={() => router.push("about")}
+            >
+              <FontAwesomeIcon icon={faAddressCard}></FontAwesomeIcon> About Me
+            </button>
+            <button
+              type="button"
+              className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
+              onClick={() => router.push("mailto:a@likecat.cn")}
+            >
+              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> Mail Me
+            </button>
           </div>
         </div>
       </div>
