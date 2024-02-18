@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faOrcid } from "@fortawesome/free-brands-svg-icons";
 
-export function Footer() {
+export function FootBar() {
   return (
     <footer className=" bg-slate-950 mt-8">
       <div className="container mx-auto px-4 py-8">

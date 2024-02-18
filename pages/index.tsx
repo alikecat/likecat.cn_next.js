@@ -1,20 +1,20 @@
 import "/app/globals.css";
 import { NavBar } from "@/components/NavBar";
-import { Footer } from "@/components/Footer";
+import { FootBar } from "@/components/FootBar";
 import HeroSection from "@/components/HeroSection.mdx";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <header>
+      <header className="sticky top-0 z-10">
         <NavBar />
       </header>
       <main>
         <HeroSection />
         <InterestBar />
       </main>
-      <Footer />
+      <FootBar />
     </div>
   );
 }

@@ -5,17 +5,17 @@ import router from "next/router";
 
 export function NavBar() {
   return (
-    <nav className="fixed backdrop-brightness-75 backdrop-blur-md w-full z-10">
+    <nav className="backdrop-brightness-75 backdrop-blur-md w-full">
       <div className="container mx-auto px-4 flex justify-between h-20">
         <Link
-          className="hover:scale-105 active:scale-110 transition ease-in-out"
+          className="my-auto hover:scale-105 active:scale-110 transition ease-in-out"
           href={"/"}
         >
-          <div className="flex flex-col py-2 text-center my-auto">
+          <div className="flex flex-col">
             <span className="font-mono text-2xl font-bold tracking-wider">
               Likecat
             </span>
-            <span className="font-serif font-bold text-sm">Bojun Zhang</span>
+            <span className="font-mono font-bold">Bojun Zhang</span>
           </div>
         </Link>
         <div className="flex space-x-4 sm:text-xl py-4 my-auto">
