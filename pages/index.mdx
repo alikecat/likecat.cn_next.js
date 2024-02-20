@@ -3,7 +3,6 @@ import { NavBar } from "@/components/NavBar";
 import { FootBar } from "@/components/FootBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard, faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import router from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,7 +10,7 @@ import Image from "next/image";
 
 🌟 What cosmic wonders should this cyber sanctuary behold? That's where you come in! Your ingenious ideas can turn this digital playground into a constellation of captivating experiences – be it interactive marvels, mind-bending graphics, or a dedicated space for the weirdest cat videos in the cosmos.
 
-📧 Shoot your suggestions my way at <Link href={"mailto:a@likecat.cn"} className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out">a@likecat.cn</Link>, and let the brainstorming cosmic energy flow! Your imagination might just be the nebula that sparks this website's celestial transformation. 🎨💡
+📧 Shoot your suggestions my way at <Link href="mailto:a@likecat.cn" className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out">a@likecat.cn</Link>, and let the brainstorming cosmic energy flow! Your imagination might just be the nebula that sparks this website's celestial transformation. 🎨💡
 
 🙏 A galaxy-sized thank you for dropping by this construction zone. Your virtual hard hat and imaginative contributions are the stardust that propels this project forward! Brace yourself for the cosmic reveal – it's bound to be legendary! 🚧
 
@@ -58,10 +57,9 @@ export default function Layout(props) {
           <h2 className="font-bold mb-4">Things I interested</h2>
           <div className="flex space-x-4 font-mono border-y border-y-white/20 py-4">
             <div className="space-y-4">
-              {" "}
               <Image
-                src={"/Design_UI.jpg"}
-                alt={""}
+                src="/Design_UI.jpg"
+                alt="Desgin UI"
                 width={600}
                 height={400}
                 className="rounded-md shadow-md saturate-150"
@@ -70,8 +68,8 @@ export default function Layout(props) {
             </div>
             <div className="space-y-4">
               <Image
-                src={"/Write_Code.jpg"}
-                alt={""}
+                src="/Write_Code.jpg"
+                alt="Write Code"
                 width={600}
                 height={400}
                 className="rounded-md shadow-md saturate-150"
@@ -80,8 +78,8 @@ export default function Layout(props) {
             </div>
             <div className="space-y-4">
               <Image
-                src={"/Play_Game.jpg"}
-                alt={""}
+                src="/Play_Game.jpg"
+                alt="Play Game"
                 width={600}
                 height={400}
                 className="rounded-md shadow-md saturate-150"
