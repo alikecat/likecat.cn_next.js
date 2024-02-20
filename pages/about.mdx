@@ -24,8 +24,8 @@ export default function Layout(props) {
       </header>
       <main className="container m-auto px-4 flex md:space-x-8">
         <SideBar />
-        <div className="md:py-12 space-y-4">
-          <div className="flex my-4 space-x-4 md:hidden">
+        <div className="py-4 md:py-12 space-y-4">
+          <div className="flex space-x-4 md:hidden">
             <Image
               src="/Avatar.jpg"
               alt=""
@@ -35,9 +35,7 @@ export default function Layout(props) {
               className="mb-auto rounded-full outline outline-1 outline-offset-2 outline-white/20"
             />
             <div className="my-auto font-mono">
-              <h2 className="font-serif font-bold text-lg">
-                Bojun Zhang
-              </h2>
+              <h2 className="font-serif font-bold text-lg">Bojun Zhang</h2>
               <p>
                 Mechanical PhD candidate, tackling gears by day, moonlighting as
                 a code wizard and UI designer by night. 🚀💻✨
@@ -53,7 +51,9 @@ export default function Layout(props) {
             height={1080}
             className="rounded-2xl"
           />
-          <div className="font-sans xl:text-2xl md:text-xl xl:leading-loose md:leading-relaxed space-y-4">{props.children}</div>
+          <div className="font-sans xl:text-2xl md:text-xl xl:leading-loose md:leading-relaxed space-y-4">
+            {props.children}
+          </div>
         </div>
       </main>
       <footer>

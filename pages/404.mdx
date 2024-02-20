@@ -1,5 +1,6 @@
 import "/app/globals.css";
 import { NavBar } from "@/components/NavBar";
+import { FootBar } from "@/components/FootBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faHouse } from "@fortawesome/free-solid-svg-icons";
 import router from "next/router";
@@ -9,14 +10,16 @@ Hey there, stargazer! Looks like you stumbled upon a digital black hole – the 
 
 No worries, though! It could be that I'm currently on a coffee break in the server room or maybe the code elves are playing hide-and-seek. Either way, your desired destination seems to be taking a cosmic siesta.
 
-Why not boomerang back to the homepage and explore other intergalactic wonders? 🌠✨ If this feels like a galactic glitch or you have questions as profound as the mysteries of the universe, shoot me an email at <Link href={"mailto:a@likecat.cn"} className="hover:text-blue-200 active:text-blue-400 transition ease-in-out">a@likecat.cn</Link>. I'll be there faster than the Millennium Falcon making the Kessel Run!
+Why not boomerang back to the homepage and explore other intergalactic wonders? 🌠✨ If this feels like a galactic glitch or you have questions as profound as the mysteries of the universe, shoot me an email at <Link href={"mailto:a@likecat.cn"} className=" underline hover:text-blue-200 active:text-blue-400 transition ease-in-out">a@likecat.cn</Link>. I'll be there faster than the Millennium Falcon making the Kessel Run!
 
 Thanks a gazillion for your patience and stellar vibes! 🌌👾
 
 export default function Layout(props) {
   return (
     <div>
-      <NavBar />
+      <header>
+        <NavBar />
+      </header>
       <main className="flex min-h-screen bg-gradient-radial from-sky-800">
         <div className="container m-auto px-4 py-24 font-mono xl:text-2xl md:text-xl xl:leading-loose md:leading-relaxed space-y-4">
           <h1 className="mb-8 font-serif xl:text-9xl lg:text-8xl md:text-7xl text-5xl font-bold tracking-widest">
@@ -27,24 +30,26 @@ export default function Layout(props) {
             <span>Page Not Found!</span>
           </h2>
           {props.children}
-          <div className="space-x-4 pt-8">
-            <button
-              type="button"
-              className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
-              onClick={() => router.back()}
+          <div className="flex space-x-4 pt-8">
+            <Link
+              href="javascript:history.back()"
+              className="border rounded-md space-x-1 font-sans font-semibold p-4 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
             >
-              <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon> Go Back
-            </button>
-            <button
-              type="button"
-              className="border rounded-md font-sans font-semibold px-4 py-2 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
-              onClick={() => router.push("/")}
+              <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+              <span>Go Back</span>
+            </Link>
+            <Link
+              href="/"
+              className="border rounded-md space-x-1 font-sans font-semibold p-4 hover:bg-white/10 active:bg-white/20 hover:scale-105 active:scale-110 transition ease-in-out"
             >
-              <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> Go Home
-            </button>
+              <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> <span>Go Home</span>
+            </Link>
           </div>
         </div>
       </main>
+      <footer>
+        <FootBar />
+      </footer>
     </div>
   );
 }

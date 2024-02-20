@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard, faHouse } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import router from "next/router";
 
 export function NavBar() {
   return (
@@ -19,20 +18,20 @@ export function NavBar() {
           </div>
         </Link>
         <div className="flex space-x-4 sm:text-xl py-4 my-auto">
-          <button
-            type="button"
-            className="p-2 rounded-md hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
-            onClick={() => router.push("/")}
+          <Link
+            href={"/"}
+            className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
           >
-            <FontAwesomeIcon icon={faHouse} /> Home
-          </button>
-          <button
-            type="button"
-            className="p-2 rounded-md hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
-            onClick={() => router.push("about")}
+            <FontAwesomeIcon icon={faHouse} />
+            <span className="max-md:hidden">Home</span>
+          </Link>
+          <Link
+            href={"about"}
+            className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
           >
-            <FontAwesomeIcon icon={faAddressCard} /> About
-          </button>
+            <FontAwesomeIcon icon={faAddressCard} />
+            <span className="max-md:hidden">About</span>
+          </Link>
         </div>
       </div>
     </nav>
