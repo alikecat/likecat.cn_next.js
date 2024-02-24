@@ -6,8 +6,8 @@ import { faGithub, faOrcid } from "@fortawesome/free-brands-svg-icons";
 export function FootBar() {
   return (
     <footer className=" bg-slate-950">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex max-sm:flex-col my-4 sm:space-x-4 font-bold">
+      <div className="container mx-auto px-4 py-8 space-y-4">
+        <div className="flex max-sm:flex-col sm:space-x-4 font-bold">
           <Link
             href="/"
             className="space-x-1 underline hover:text-blue-200 active:text-blue-400 transition ease-in-out"

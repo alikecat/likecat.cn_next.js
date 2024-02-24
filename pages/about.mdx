@@ -18,11 +18,11 @@ Not seeking sponsorship at the moment, but I am on a quest for tech companions. 
 
 export default function Layout(props) {
   return (
-    <div>
+    <div className="flex flex-col">
       <header className="sticky top-0 z-10">
         <NavBar />
       </header>
-      <main className="container m-auto px-4 flex md:space-x-8">
+      <main className="flex-1 container m-auto px-4 flex md:space-x-8">
         <SideBar />
         <div className="py-4 md:py-12 space-y-4">
           <div className="flex space-x-4 md:hidden">

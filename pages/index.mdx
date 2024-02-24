@@ -16,11 +16,11 @@ import Image from "next/image";
 
 export default function Layout(props) {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-10">
         <NavBar />
       </header>
-      <main>
+      <main className="flex-1">
         <div
           className="bg-cover"
           style={{
