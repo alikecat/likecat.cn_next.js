@@ -23,7 +23,7 @@ export function FootBar() {
             <span>a@likecat.cn</span>
           </Link>
           <Link
-            href="https://github.com/zbj178016760"
+            href="https://github.com/alikecat"
             className="space-x-1 underline hover:text-blue-200 active:text-blue-400 transition ease-in-out"
           >
             <FontAwesomeIcon icon={faGithub} />
