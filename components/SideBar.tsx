@@ -9,6 +9,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function SideBar() {
+  const nav = [
+    { name: "XJTU", icon: faSchool },
+    { name: "Xi'an, China", icon: faLocationDot },
+    { name: "a@likecat.cn", icon: faEnvelope, href: "mailto:a@likecat.cn" },
+    { name: "alikecat", icon: faGithub, href: "https://github.com/alikecat" },
+    {
+      name: "0000-0002-1867-0243",
+      icon: faOrcid,
+      href: "https://orcid.org/0000-0002-1867-0243",
+    },
+  ];
   return (
     <div className="w-72 shrink-0 max-md:hidden">
       <div className="sticky top-28 flex flex-col py-4 space-y-4 font-sans">
@@ -28,38 +39,29 @@ export function SideBar() {
           code wizard and UI designer by night. 🚀💻✨
         </p>
         <div className="table leading-loose border-t border-white/20 py-4">
-          <div className="table-row">
-            <FontAwesomeIcon icon={faSchool} className="table-cell m-auto" />
-            <span className="table-cell">XJTU</span>
-          </div>
-          <div className="table-row">
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              className="table-cell m-auto"
-            />
-            <span className="table-cell">{"Xi'an, China"}</span>
-          </div>
-          <Link
-            href="mailto:a@likecat.cn"
-            className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out table-row"
-          >
-            <FontAwesomeIcon icon={faEnvelope} className="table-cell m-auto" />
-            <span className="table-cell">a@likecat.cn</span>
-          </Link>
-          <Link
-            href="https://github.com/alikecat"
-            className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out table-row"
-          >
-            <FontAwesomeIcon icon={faGithub} className="table-cell m-auto" />
-            <span className="table-cell">alikecat</span>
-          </Link>
-          <Link
-            href="https://orcid.org/0000-0002-1867-0243"
-            className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out table-row"
-          >
-            <FontAwesomeIcon icon={faOrcid} className="table-cell m-auto" />
-            <span className="table-cell">0000-0002-1867-0243</span>
-          </Link>
+          {nav.map((link) =>
+            link.href ? (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="underline hover:text-blue-200 active:text-blue-400 transition ease-in-out table-row"
+              >
+                <FontAwesomeIcon
+                  icon={link.icon}
+                  className="table-cell m-auto"
+                />
+                <span className="table-cell">{link.name}</span>
+              </Link>
+            ) : (
+              <div key={link.name} className="table-row">
+                <FontAwesomeIcon
+                  icon={link.icon}
+                  className="table-cell m-auto"
+                />
+                <span className="table-cell">{link.name}</span>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

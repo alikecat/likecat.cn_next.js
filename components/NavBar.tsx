@@ -8,6 +8,10 @@ import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 
 export function NavBar() {
+  const nav = [
+    { name: "Home", icon: faHouse, href: "/" },
+    { name: "About", icon: faAddressCard, href: "about" },
+  ];
   return (
     <Disclosure
       as="nav"
@@ -26,20 +30,16 @@ export function NavBar() {
           </div>
         </Link>
         <div className="flex space-x-4 sm:text-xl my-auto max-md:hidden">
-          <Link
-            href="/"
-            className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
-          >
-            <FontAwesomeIcon icon={faHouse} />
-            <span>Home</span>
-          </Link>
-          <Link
-            href="about"
-            className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
-          >
-            <FontAwesomeIcon icon={faAddressCard} />
-            <span>About</span>
-          </Link>
+          {nav.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
+            >
+              <FontAwesomeIcon icon={link.icon} />
+              <span>{link.name}</span>
+            </Link>
+          ))}
         </div>
         <div className="my-auto md:hidden">
           <Disclosure.Button className="p-2 space-x-1 hover:text-blue-200 active:hover:text-blue-400 transition ease-in-out">
@@ -48,22 +48,17 @@ export function NavBar() {
         </div>
       </div>
       <Disclosure.Panel className="container mx-auto flex flex-col p-2 space-y-1">
-        <Disclosure.Button
-          as={Link}
-          href="/"
-          className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
-        >
-          <FontAwesomeIcon icon={faHouse} />
-          <span>Home</span>
-        </Disclosure.Button>
-        <Disclosure.Button
-          as={Link}
-          href="about"
-          className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
-        >
-          <FontAwesomeIcon icon={faAddressCard} />
-          <span>About</span>
-        </Disclosure.Button>
+        {nav.map((link) => (
+          <Disclosure.Button
+            key={link.name}
+            as={Link}
+            href={link.href}
+            className="p-2 rounded-md space-x-1 hover:text-blue-200 hover:bg-white/10 active:bg-white/20 transition ease-in-out"
+          >
+            <FontAwesomeIcon icon={link.icon} />
+            <span>{link.name}</span>
+          </Disclosure.Button>
+        ))}
       </Disclosure.Panel>
     </Disclosure>
   );
