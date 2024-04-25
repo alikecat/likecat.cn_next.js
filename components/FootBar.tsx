@@ -29,7 +29,7 @@ export function FootBar() {
             </Link>
           ))}
         </div>
-        <div className=" font-serif">© 2024 Bojun Zhang</div>
+        <div className=" font-mono">© 2024 Bojun Zhang</div>
       </div>
     </footer>
   );

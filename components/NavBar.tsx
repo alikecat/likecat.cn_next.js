@@ -15,7 +15,7 @@ export function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="backdrop-brightness-75 backdrop-blur-md w-full"
+      className="backdrop-brightness-75 backdrop-blur-md w-full font-mono"
     >
       <div className="container mx-auto px-4 flex justify-between h-20">
         <Link
@@ -23,10 +23,10 @@ export function NavBar() {
           href="/"
         >
           <div className="flex flex-col">
-            <span className="font-mono text-2xl font-bold tracking-wider">
+            <span className="font-dune text-2xl font-bold tracking-wider">
               Likecat
             </span>
-            <span className="font-mono font-bold">Bojun Zhang</span>
+            <span className="font-dune font-bold">Bojun Zhang</span>
           </div>
         </Link>
         <div className="flex space-x-4 sm:text-xl my-auto max-md:hidden">

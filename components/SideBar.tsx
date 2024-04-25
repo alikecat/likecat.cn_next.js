@@ -31,14 +31,14 @@ export function SideBar() {
           quality={100}
           className="mx-auto rounded-full outline outline-1 outline-offset-8 outline-white/20"
         />
-        <h2 className="font-serif font-bold text-2xl text-center">
+        <h2 className="font-dune font-bold text-2xl text-center">
           Bojun Zhang
         </h2>
         <p className="font-mono">
           Mechanical PhD candidate, tackling gears by day, moonlighting as a
           code wizard and UI designer by night. 🚀💻✨
         </p>
-        <div className="table leading-loose border-t border-white/20 py-4">
+        <div className="table leading-loose border-t border-white/20 py-4 font-bold">
           {nav.map((link) =>
             link.href ? (
               <Link
